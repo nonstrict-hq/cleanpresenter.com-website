@@ -1,0 +1,53 @@
+//
+//  File.swift
+//  
+//
+//  Created by Mathijs Kadijk on 25/01/2023.
+//
+
+import Foundation
+import Publish
+import Plot
+
+extension Theme where Site == CleanPresenterWebsite {
+    static var cleanPresenter: Self {
+        Theme(
+            htmlFactory: CleanPresenterWebsiteHTMLFactory(),
+            resourcePaths: []
+        )
+    }
+
+    private struct CleanPresenterWebsiteHTMLFactory: HTMLFactory {
+        func makeIndexHTML(for index: Publish.Index, context: Publish.PublishingContext<CleanPresenterWebsite>) throws -> Plot.HTML {
+            HTML(
+                .head(for: index, on: context.site),
+                .body(
+                    .component(HeroAlt()),
+                    .component(Testimonials()),
+                    .component(FeatureSectionA()),
+                    .component(Footer())
+                )
+            )
+        }
+
+        func makeSectionHTML(for section: Publish.Section<CleanPresenterWebsite>, context: Publish.PublishingContext<CleanPresenterWebsite>) throws -> Plot.HTML {
+            HTML(.body(.text("TODO")))
+        }
+        
+        func makeItemHTML(for item: Publish.Item<CleanPresenterWebsite>, context: Publish.PublishingContext<CleanPresenterWebsite>) throws -> Plot.HTML {
+            HTML(.body(.text("TODO")))
+        }
+        
+        func makePageHTML(for page: Publish.Page, context: Publish.PublishingContext<CleanPresenterWebsite>) throws -> Plot.HTML {
+            HTML(.body(.text("TODO")))
+        }
+        
+        func makeTagListHTML(for page: Publish.TagListPage, context: Publish.PublishingContext<CleanPresenterWebsite>) throws -> Plot.HTML? {
+            HTML(.body(.text("TODO")))
+        }
+        
+        func makeTagDetailsHTML(for page: Publish.TagDetailsPage, context: Publish.PublishingContext<CleanPresenterWebsite>) throws -> Plot.HTML? {
+            HTML(.body(.text("TODO")))
+        }
+    }
+}
