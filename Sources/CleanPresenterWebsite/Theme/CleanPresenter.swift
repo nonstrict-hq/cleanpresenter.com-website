@@ -19,8 +19,10 @@ extension Theme where Site == CleanPresenterWebsite {
 
     private struct CleanPresenterWebsiteHTMLFactory: HTMLFactory {
         func makeIndexHTML(for index: Publish.Index, context: Publish.PublishingContext<CleanPresenterWebsite>) throws -> Plot.HTML {
-            HTML(
-                .head(for: index, on: context.site),
+            var indexWithImage = index
+            indexWithImage.imagePath = context.site.imagePath
+            return HTML(
+                .head(for: indexWithImage, on: context.site),
                 .body(
                     .component(HeroAlt()),
                     .component(Testimonials()),
