@@ -26,7 +26,7 @@ extension Theme where Site == CleanPresenterWebsite {
                 .body(
                     .component(HeroAlt()),
                     .component(Testimonials()),
-                    .component(FeatureSectionA()),
+                    .component(FeatureSectionB()),
                     .component(Footer())
                 )
             )
