@@ -1,6 +1,6 @@
 import Foundation
 import Plot
 
-struct Hero: HTMLFileComponent {
+struct PerfectFor: HTMLFileComponent {
   let searchPath = #filePath
 }

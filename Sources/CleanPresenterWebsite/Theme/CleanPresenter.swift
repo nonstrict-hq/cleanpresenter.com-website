@@ -27,6 +27,11 @@ extension Theme where Site == CleanPresenterWebsite {
                     .component(HeroAlt()),
                     .component(Testimonials()),
                     .component(FeatureSectionB()),
+                    .component(PerfectFor()),
+                    .component(Pricing()),
+                    .component(MadeForMac()),
+                    .component(FAQ()),
+                    .component(CTA()),
                     .component(Footer())
                 )
             )
