@@ -24,6 +24,7 @@ extension Theme where Site == CleanPresenterWebsite {
             return HTML(
                 .head(for: indexWithImage, on: context.site),
                 .body(
+                    .component(Menu()),
                     .component(HeroAlt()),
                     .component(Testimonials()),
                     .component(FeatureSectionB()),
