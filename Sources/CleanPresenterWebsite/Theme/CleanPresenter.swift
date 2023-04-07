@@ -33,7 +33,8 @@ extension Theme where Site == CleanPresenterWebsite {
                     .component(MadeForMac()),
                     .component(FAQ()),
                     .component(CTA()),
-                    .component(Footer())
+                    .component(Footer()),
+                    .component(InlineJavaScript())
                 )
             )
         }
