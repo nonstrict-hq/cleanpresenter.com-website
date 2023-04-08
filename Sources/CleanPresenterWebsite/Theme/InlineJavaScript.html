@@ -4,19 +4,20 @@ function replay(id) {
     document.getElementById(id).play();
 }
 
-(function() {
+window.addEventListener('load', function () {
     // Autoplay videos once their in view
     let observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-                if (entry.intersectionRatio > 0.9 && entry.target.paused && entry.target.currentTime == 0) {
+                console.log(entry.target.id, entry.intersectionRatio)
+                if (entry.intersectionRatio > 0.75 && entry.target.paused && entry.target.currentTime < 0.1) {
                     console.log("Autoplay", entry.target.id)
                     entry.target.play();
                 }
             });
         },
-        { root: document.body, rootMargin: "0px", threshold: 0.9 }
+        { threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.9, 1], rootMargin: "0 999px" }
     );
     document.querySelectorAll("video").forEach((video) => { observer.observe(video) });
-})();
+})
 </script>
