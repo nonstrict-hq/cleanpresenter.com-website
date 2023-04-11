@@ -17,8 +17,8 @@ struct CleanPresenterWebsite: Website {
         let tags: [String]
     }
     
-    let name = "CleanPresenter | Distraction-Free Presenting"
-    let description = "With CleanPresenter you can create a distraction-free presentation in one click. Share a single app on a TV or projector, CleanPresenter provides elegant wallpapers, and beautifully centers your content."
+    let name = "CleanPresenter | Stunning Live Demos"
+    let description = "Show your actual product with a professional look in one click. Share a single app on a TV or projector, CleanPresenter provides elegant wallpapers, and beautifully centers your content."
     let language = Language.english
     let imagePath: Publish.Path? = "images/og-main.png"
     let url = URL(string: "https://cleanpresenter.com")!
