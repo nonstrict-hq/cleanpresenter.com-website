@@ -9,15 +9,16 @@ window.addEventListener('load', function () {
     let observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-                console.log(entry.target.id, entry.intersectionRatio)
-                if (entry.intersectionRatio > 0.75 && entry.target.paused && entry.target.currentTime < 0.1) {
-                    console.log("Autoplay", entry.target.id)
-                    entry.target.play();
+                let video = document.getElementById(entry.target.dataset.target)
+                console.log(entry.target.id, entry.intersectionRatio, video.id)
+                if (entry.intersectionRatio > 0.9 && video.paused && video.currentTime < 0.1) {
+                    console.log("Autoplay", video.id)
+                    video.play();
                 }
             });
         },
-        { threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.9, 1], rootMargin: "0 999px" }
+        { threshold: [0.9], rootMargin: "0 999px" }
     );
-    document.querySelectorAll("video").forEach((video) => { observer.observe(video) });
+    document.querySelectorAll("video").forEach((video) => { observer.observe(document.getElementById(video.dataset.trigger)) });
 })
 </script>
