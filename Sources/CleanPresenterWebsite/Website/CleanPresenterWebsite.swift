@@ -16,9 +16,9 @@ struct CleanPresenterWebsite: Website {
         let imageCaption: String?
         let tags: [String]
     }
-    
-    let name = "CleanPresenter • Stunning Live Demos"
-    let description = "Show your actual product with a professional look in one click. Share a single app on a TV or projector, CleanPresenter provides elegant wallpapers, and beautifully centers your content."
+
+    let name = "CleanPresenter • Single Window Presentations"
+    let description = "Present a single window instead of your whole desktop. No more private content visible on a TV, projector or video conference. Beautifully centered on top of a collection of elegant wallpapers."
     let language = Language.english
     let imagePath: Publish.Path? = "images/og-main.png"
     let url = URL(string: "https://cleanpresenter.com")!
