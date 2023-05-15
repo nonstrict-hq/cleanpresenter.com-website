@@ -17,7 +17,7 @@ struct CleanPresenterWebsite: Website {
         let tags: [String]
     }
 
-    let name = "CleanPresenter • Single Window Presentations"
+    let name = "CleanPresenter • Mirror one window"
     let description = "Present a single window instead of your whole desktop. No more private content visible on a TV, projector or video conference. Beautifully centered on top of a collection of elegant wallpapers."
     let language = Language.english
     let imagePath: Publish.Path? = "images/og-main.png"
